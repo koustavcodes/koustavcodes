@@ -1,6 +1,7 @@
 <h1 align="left">Hi 👋, I'm Izumi Yuuki</h1>
 <h3 align="left">A passionate frontend developer</h3>
 - 🌱 I’m currently learning **HTML,CSS,JS and React**
+<br>
 - ⚡ Fun fact **I like Anime and Gaming**
 
 <h3 align="left">Languages and Tools:</h3>
