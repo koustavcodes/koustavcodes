@@ -1,7 +1,7 @@
 - 👋 Hi, I’m Izumi Yuuki
 - 👀 I’m interested in building websites
 - 🌱 I’m currently learning HTML , CSS , JavaScript and React
-- I love Anime, Gaming and Coding
+- 🌱 I love Anime, Gaming and Coding
 
 
 <!---
