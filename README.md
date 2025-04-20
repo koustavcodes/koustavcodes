@@ -16,7 +16,7 @@
 
 ---
 
-### 🧠 Languages I Know
+### 💻 Languages I Know
 
 <p align="left">
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="HTML5" width="40" height="40"/>
@@ -53,7 +53,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.cyclic.app/graph?username=izumiyuuki&theme=react-dark&bg_color=1A1B27&hide_border=true" alt="GitHub activity graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=izumiyuuki&theme=react-dark&bg_color=1A1B27&hide_border=true" alt="GitHub activity graph" />
 </p>
 
 <p align="center">
