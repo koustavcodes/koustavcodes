@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=izumiyuuki&label=Profile%20views&color=0e75b6&style=flat" alt="izumiyuuki" /> </p>
 
-- 🌱 I’m currently learning **HTML,CSS,JS and React**
+- 🌱 I’m currently learning **HTML, CSS, JS, React and Redux**
 
 - ⚡ Fun fact **I like Anime and Playing video games.**
 
