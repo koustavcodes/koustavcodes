@@ -1,8 +1,8 @@
-<h1 align="center">Hi 👋, I'm Izumi Yuuki</h1>
+<h1 align="center">Hi 👋, I'm Koustav Sarkar</h1>
 <h3 align="center">A passionate Front-End Web Developer who enjoys building beautiful, user-friendly websites!</h3>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=izumiyuuki&label=Profile%20views&color=0e75b6&style=flat" alt="profile views" />
+  <img src="https://komarev.com/ghpvc/?username=koustavcodes&label=Profile%20views&color=0e75b6&style=flat" alt="profile views" />
 </p>
 
 ---
