@@ -48,12 +48,13 @@
 ### 📊 GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=koustavcodes&theme=tokyonight&hide_border=true" alt="GitHub Streak Stats"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=koustavcodes&theme=react-dark&bg_color=1A1B27&hide_border=true" alt="GitHub activity graph" />
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=koustavcodes&theme=react-dark&bg_color=1A1B27&hide_border=true" alt="GitHub activity graph" />
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=koustavcodes&theme=tokyonight&hide_border=true" alt="GitHub Streak Stats"/>
 </p>
+
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=koustavcodes&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages"/>
