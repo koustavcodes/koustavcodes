@@ -4,10 +4,8 @@ on:
   push:
     branches:
       - main
-  # Auto-run once per week
   schedule:
-    - cron: "0 0 * * 1"     # every Monday at 00:00 UTC
-  # Manual trigger
+    - cron: "0 0 * * 1" # every Monday at 00:00 UTC
   workflow_dispatch:
 
 permissions:
@@ -21,50 +19,45 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # ---------- Cache to reduce API calls ----------
-      - name: Cache stats
-        uses: actions/cache@v3
-        id: stats-cache
-        with:
-          path: ./assets
-          key: stats-cache-${{ github.run_id }}
-          restore-keys: |
-            stats-cache-
-
-      # ---------- Generate Contribution Graph ----------
+      # ---------- Contribution Graph (3D Contribution heatmap) ----------
       - name: Contribution Graph
-        uses: GitHub-Usercontrib/usercontrib-action@v1
+        uses: yoshi389111/github-profile-3d-contrib@main
         with:
-          user: koustavcodes
+          username: koustavcodes
           theme: tokyonight
           output: assets/contributions.svg
 
-      # ---------- Languages Activity Graph ----------
-      - name: Languages Activity Graph
-        uses: ashutosh1919/github-readme-activity-graph@master
-        with:
-          USERNAME: koustavcodes
-          GRAPH_PATH: assets/languages.svg
-          THEME: tokyonight
-
       # ---------- Streak Stats ----------
       - name: Streak Stats
-        uses: anmol098/waka-readme-streak-stats@master
+        uses: denvercoder1/github-readme-streak-stats@main
         with:
-          GH_LOGIN: koustavcodes
-          LOCALE: en
-          STATS: true
-          OUTPUT: assets/streak.svg
-          THEME: tokyonight
+          user: koustavcodes
+          theme: tokyo-night
+          hide_border: true
+          output: assets/streak.svg
 
-      # ---------- Commit back only if changed ----------
+      # ---------- Most used languages ----------
+      - name: Languages Stats
+        uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: ""
+          filename: assets/languages.svg
+          plugin_languages: yes
+          plugin_languages_sections: most-used
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_limit: 8
+          plugin_languages_colors: github
+          plugin_languages_threshold: 0%
+
+      # ---------- Commit stats only if something changed ----------
       - name: Commit stats if changed
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          
+
           if git diff --quiet; then
-            echo "No changes in stats — nothing to commit."
+            echo "No changes detected — nothing to commit."
           else
             timestamp=$(date +"%Y-%m-%d %H:%M:%S")
             git add assets/*.svg
