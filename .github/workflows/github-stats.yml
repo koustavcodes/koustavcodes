@@ -58,6 +58,8 @@ jobs:
           plugin_languages_indepth: yes
           plugin_languages_limit: 8
           config_display: columns
+          config_legend: no
+          config_time: true
           config_padding: 0
           config_timezone: Asia/Kolkata
 
@@ -76,6 +78,8 @@ jobs:
           plugin_languages_indepth: yes
           plugin_languages_limit: 8
           config_display: columns
+          config_legend: no
+          config_time: true
           config_padding: 0
           config_timezone: Asia/Kolkata
 
