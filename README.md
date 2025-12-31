@@ -45,7 +45,7 @@
 
 ---
 
-### 📊 GitHub Stats (Auto-updated, Always Visible)
+### 📊 GitHub Stats
 
 <div align="center">
   <img src="./assets/contributions.svg" alt="Contribution Graph" width="32%" />
