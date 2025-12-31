@@ -1,0 +1,70 @@
+name: Generate GitHub Stats
+
+on:
+  # Auto-run once per week
+  schedule:
+    - cron: "0 0 * * 1"     # every Monday at 00:00 UTC
+  # Manual trigger
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # ---------- Cache to reduce API calls ----------
+      - name: Cache stats
+        uses: actions/cache@v3
+        id: stats-cache
+        with:
+          path: ./assets
+          key: stats-cache-${{ github.run_id }}
+          restore-keys: |
+            stats-cache-
+
+      # ---------- Generate Contribution Graph ----------
+      - name: Contribution Graph
+        uses: GitHub-Usercontrib/usercontrib-action@v1
+        with:
+          user: koustavcodes
+          theme: tokyonight
+          output: assets/contributions.svg
+
+      # ---------- Languages Activity Graph ----------
+      - name: Languages Activity Graph
+        uses: ashutosh1919/github-readme-activity-graph@master
+        with:
+          USERNAME: koustavcodes
+          GRAPH_PATH: assets/languages.svg
+          THEME: tokyonight
+
+      # ---------- Streak Stats ----------
+      - name: Streak Stats
+        uses: anmol098/waka-readme-streak-stats@master
+        with:
+          GH_LOGIN: koustavcodes
+          LOCALE: en
+          STATS: true
+          OUTPUT: assets/streak.svg
+          THEME: tokyonight
+
+      # ---------- Commit back only if changed ----------
+      - name: Commit stats if changed
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          
+          if git diff --quiet; then
+            echo "No changes in stats — nothing to commit."
+          else
+            timestamp=$(date +"%Y-%m-%d %H:%M:%S")
+            git add assets/*.svg
+            git commit -m "📊 Update stats — $timestamp"
+            git push
+          fi
