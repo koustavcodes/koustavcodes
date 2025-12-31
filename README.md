@@ -48,24 +48,17 @@
 ### 📊 GitHub Stats
 
 <div align="center">
-  <!-- Contributions -->
+  <!-- Contribution graph with streak -->
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/contributions-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="assets/contributions-light.svg">
-    <img alt="Contribution Graph" src="assets/contributions-light.svg" width="32%">
+    <img alt="Contribution Graph" src="assets/contributions-light.svg" width="90%">
   </picture>
 
-  <!-- Streak -->
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/streak-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/streak-light.svg">
-    <img alt="Streak Stats" src="assets/streak-light.svg" width="32%">
-  </picture>
-
-  <!-- Languages -->
+  <!-- Language percentages -->
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="assets/languages-light.svg">
-    <img alt="Languages Graph" src="assets/languages-light.svg" width="32%">
+    <img alt="Language Usage" src="assets/languages-light.svg" width="50%">
   </picture>
 </div>
