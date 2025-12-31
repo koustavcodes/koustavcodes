@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 0 * * 1" # every Monday at 00:00 UTC
+    - cron: "0 0 * * 1" # every Monday
   workflow_dispatch:
 
 permissions:
@@ -20,29 +20,31 @@ jobs:
         uses: actions/checkout@v3
 
       #########################################
-      ### DARK MODE STATS
+      ### DARK MODE
       #########################################
 
-      # --- Contributions (Dark) ---
+      # Contributions (dark)
       - name: Contributions Graph (Dark)
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/contributions-dark.svg
           base: ""
-          plugin_contrib: yes
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
           config_timezone: Asia/Kolkata
 
-      # --- Streak (Dark) ---
+      # Streak (dark)
       - name: Streak Stats (Dark)
-        uses: denvercoder1/github-readme-streak-stats@main
+        uses: lowlighter/metrics@latest
         with:
-          user: koustavcodes
-          theme: tokyo-night
-          hide_border: true
-          output: assets/streak-dark.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          filename: assets/streak-dark.svg
+          base: ""
+          plugin_stars: yes
+          plugin_stars_limit: 5
 
-      # --- Languages (Dark) ---
+      # Languages (dark)
       - name: Languages Card (Dark)
         uses: lowlighter/metrics@latest
         with:
@@ -54,30 +56,31 @@ jobs:
           plugin_languages_limit: 8
 
       #########################################
-      ### LIGHT MODE STATS
+      ### LIGHT MODE
       #########################################
 
-      # --- Contributions (Light) ---
+      # Contributions (light)
       - name: Contributions Graph (Light)
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/contributions-light.svg
           base: ""
-          plugin_contrib: yes
-          config_timezone: Asia/Kolkata
+          plugin_isocalendar: yes
           config_order: base.header, base.activity, base.repositories
+          config_timezone: Asia/Kolkata
 
-      # --- Streak (Light) ---
+      # Streak (light)
       - name: Streak Stats (Light)
-        uses: denvercoder1/github-readme-streak-stats@main
+        uses: lowlighter/metrics@latest
         with:
-          user: koustavcodes
-          theme: default
-          hide_border: true
-          output: assets/streak-light.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          filename: assets/streak-light.svg
+          base: ""
+          plugin_stars: yes
+          plugin_stars_limit: 5
 
-      # --- Languages (Light) ---
+      # Languages (light)
       - name: Languages Card (Light)
         uses: lowlighter/metrics@latest
         with:
@@ -90,7 +93,7 @@ jobs:
           plugin_languages_colors: github
 
       #########################################
-      ### COMMIT CHANGES ONLY IF UPDATED
+      ### COMMIT CHANGES
       #########################################
 
       - name: Commit stats if changed
