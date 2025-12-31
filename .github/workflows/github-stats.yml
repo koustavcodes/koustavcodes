@@ -55,6 +55,13 @@ jobs:
       - name: Fetch Languages (light)
         run: curl -o assets/languages-light.svg "https://github-readme-stats.vercel.app/api/top-langs/?username=koustavcodes&layout=compact&theme=default&hide_border=true"
 
+      ### FETCH FULL HISTORY TO AVOID REJECTS
+      
+      - name: Fetch full history
+        run: |
+          git fetch --unshallow || true
+          git pull --rebase || true
+          
       ### COMMIT IF UPDATED
       
       - name: Commit if changed
