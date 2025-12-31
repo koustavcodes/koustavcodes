@@ -1,6 +1,9 @@
 name: Generate GitHub Stats
 
 on:
+  push:
+    branches:
+      - main
   # Auto-run once per week
   schedule:
     - cron: "0 0 * * 1"     # every Monday at 00:00 UTC
