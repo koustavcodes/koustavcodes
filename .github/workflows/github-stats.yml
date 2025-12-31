@@ -51,14 +51,13 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/languages-dark.svg
           base: ""
+          base_indepth: yes
           plugin_languages: yes
           plugin_languages_sections: most-used
           plugin_languages_details: percentage
           plugin_languages_indepth: yes
-          plugin_languages_ignored: ""
           plugin_languages_limit: 8
-          plugin_languages_categories: "markup, programming"
-          config_display: "raw"
+          config_display: columns
           config_padding: 0
           config_timezone: Asia/Kolkata
 
@@ -70,14 +69,13 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           filename: assets/languages-light.svg
           base: ""
+          base_indepth: yes
           plugin_languages: yes
           plugin_languages_sections: most-used
           plugin_languages_details: percentage
           plugin_languages_indepth: yes
-          plugin_languages_ignored: ""
           plugin_languages_limit: 8
-          plugin_languages_categories: "markup, programming"
-          config_display: "raw"
+          config_display: columns
           config_padding: 0
           config_timezone: Asia/Kolkata
 
