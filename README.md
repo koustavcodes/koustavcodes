@@ -48,7 +48,24 @@
 ### 📊 GitHub Stats
 
 <div align="center">
-  <img src="./assets/contributions.svg" alt="Contribution Graph" width="32%" />
-  <img src="./assets/streak.svg" alt="Streak Stats" width="32%" />
-  <img src="./assets/languages.svg" alt="Top Languages" width="32%" />
+  <!-- Contributions -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/contributions-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/contributions-light.svg">
+    <img alt="Contribution Graph" src="assets/contributions-light.svg" width="32%">
+  </picture>
+
+  <!-- Streak -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/streak-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/streak-light.svg">
+    <img alt="Streak Stats" src="assets/streak-light.svg" width="32%">
+  </picture>
+
+  <!-- Languages -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="assets/languages-light.svg">
+    <img alt="Languages Graph" src="assets/languages-light.svg" width="32%">
+  </picture>
 </div>
