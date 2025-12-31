@@ -50,5 +50,5 @@
 <div align="center">
   <img src="./assets/contributions.svg" alt="Contribution Graph" width="32%" />
   <img src="./assets/streak.svg" alt="Streak Stats" width="32%" />
-  <img src="./assets/languages.svg" alt="Languages Graph" width="32%" />
+  <img src="./assets/languages.svg" alt="Top Languages" width="32%" />
 </div>
